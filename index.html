@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Test</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI',SegoeUI,"Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+        .container {
+            display: flex;
+            margin: 0 auto;
+            padding: 0 5%;
+            max-width: 1600px;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-column {
+            display: flex;
+        }
+        .header-body {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            padding: 19px 6px 13px 10px;
+            margin-top: 1px;
+            width: 137px;
+            height: 100%;
+            display: inline-block;
+        }
+        .logo-img {
+            margin-top: -3px;
+            max-width: none;
+            width: 108px;
+        }
+        .surface {
+            position: relative;
+            color: #262626;
+        }
+        .surface::before {
+            border-left: 2px solid #000;
+            height: 24px;
+            content: " ";
+            margin-left: 7px;
+            position: absolute;
+            top: 15px;
+            left: 0;
+        }
+        .logo span {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            /* margin-top: -3px; */
+
+        }
+        .surface-link {
+            display: inline-block;
+            line-height: 1;
+            text-decoration: none;
+            color: #262626;
+            margin-left: 18px;
+            position: relative;
+            width: auto;
+            padding-bottom: 16px;
+        }
+        .surface-link span::after {
+            display: block;
+            content: "";
+            height: 2px;
+            width: 100%;
+            left: 0;
+            top: 21px;
+            background-color: transparent;
+            /* transition: .3s ease-in-out; */
+            position: absolute;
+        }
+        .surface-link span:hover:after {
+            background-color: black;
+        }
+        .surface-link span {          
+            position: relative;
+        }
+        nav {
+            overflow: hidden;
+            height: 100%;
+            white-space: nowrap;
+            padding-left: 2px;
+            padding-right: 1px;
+            padding-top: 4px;
+        }
+        .menu-list {
+            display: block;
+            position: relative;
+        }
+        .menu-link {
+            color: #262626;
+            display: block;
+            margin-top: 1px;
+            padding: 16px 8px 10px;
+            height: 48px;
+            text-decoration: none;
+            width: 100%;
+            position: relative;
+            margin-left: 14px;
+        }
+        .menu-link span {}
+            
+        .menu-link span::before {
+            display: block;
+            content: "";
+            height: 2px;
+            width: 100%;
+            left: 0;
+            top: 33px;
+            background-color: transparent;
+            /* transition: .3s ease-in-out; */
+            position: absolute;
+        }
+        .menu-link span:hover::before {
+            background-color: black;
+        }
+        .menu-list li {
+            display: inline-block;
+        }
+        
+        .arrow span::after {
+            font-family: "MWF-MDL2";
+            content: "\02C5";
+            position: absolute;
+            font-size: 14px;
+            display: inline-block;
+            color: currentColor;
+            font-weight: 700;
+            padding-top: 7px;
+            bottom: 16px;
+            margin-left: 6px;
+        }
+        .ml-0 {
+            margin-left: 0;
+        }
+        .mr-15 {
+            margin-right: 15px;
+        }
+        .mr-15:last-child {
+            margin-right: 26px;
+        }
+
+        .icon-search span::after {
+            font-family: "MWF-MDL2";
+            content: "\2315";
+            position: absolute;
+            font-size: 24px;
+            display: inline-block;
+            color: currentColor;
+            font-weight: 700;
+            padding-top: 7px;
+            bottom: 16px;
+            margin-left: 6px;
+        }
+        .fa {
+            font-size:18px;
+            margin-left: 5px;
+        }
+        .icon-call span::after {
+            font-family: "MWF-MDL2";
+            content: "\2706";
+            position: absolute;
+            font-size: 24px;
+            display: inline-block;
+            color: black;
+            font-weight: 700;
+            padding-top: 7px;
+            bottom: 13px;
+            margin-left: 6px; 
+        }
+        .block-bottom {
+            display: none;
+        }
+        .logo-button {
+            background-color: transparent;
+            border: 0;
+            color: #000;
+            display: block;
+            font-weight: 600;
+            height: 100%;
+            margin: 0 1px;
+            padding: 0 15px;
+            text-align: left;
+            cursor: pointer;
+        }
+        .logo-button:after {
+            font-family: "MWF-MDL2";
+            content: "\02C5";
+            font-size: 12px;
+            font-weight: 700;
+            padding-left: 7px;
+            position: relative;
+            top: 1px;
+        }
+        main {
+            background-color: rgb(228, 255, 253);
+            height: 1500px;
+        }
+        @media (max-width: 1400px) {
+            .hide span {
+                font-size: 0;
+            }
+            .icon-call span::after {
+                margin-left: 0;
+            }
+        }
+        @media (min-width: 1200px) {
+            .hide_and_seek {
+                display: none;
+            }
+        }
+        @media (max-width: 1089px) {
+            .accessories {
+                display: none;
+            }
+        }
+        @media (max-width: 1200px) {
+            .more {
+                display: block;
+            }
+            .dis_none {
+                display: none;
+            }
+        }
+        @media (max-width: 1083px) {
+            .container {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+        @media (min-width: 860px) {
+            .burger-button, .button-search, .left-mobile-column {
+                display: none;
+            }
+        }
+        @media (max-width: 859px) {
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .more, .computers, .all_micr, .surface, .search {
+                display: none;
+            }
+            .burger-button, .button-search {
+                display: inline-block;
+                margin: 1px;
+                width: 48px;
+                height: 48px;
+                color: black;
+                font-size: 20px;
+                border: none;
+                background: none;
+            }
+            .button-search {
+                transform: rotate(52deg);
+            }
+            .left-mobile-column {
+                display: flex;
+                align-items: center;
+            }
+            .logo {
+                padding-left: 29px; 
+            }
+            .header-container {
+                display: flex;
+                flex-direction: column;
+            }
+            .block-bottom {
+                display: block;
+                border-top: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+                height: 34px;
+            }
+        }
+        @media (max-width: 926px) {
+            .comp_for_business {
+                display: none;
+            }
+        }
+        @media (max-width: 390px) {
+            .burger-button, .button-search {
+                width: 35px;
+                height: 35px; 
+            }
+            .mr-15 {
+                margin-right: 10px;
+            }
+            .mr-15:last-child {
+                padding-right: 25px;
+                margin-right: 6px;
+            }
+            .mr-15:first-child {
+                display: none;
+            }
+        }
+        @media (max-width: 333px) {
+            .logo {
+                width: 123px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>        
+            <div class="container">
+                <div class="left-mobile-column">
+                    <button type="button" class="burger-button"><span>&#9776;</span></button>
+                    <button class="button-search"><span>&#x26B2;</span></button>
+                </div>
+                <div class="header-column">
+                    <a href="" class="logo"><img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="" class="logo-img"></a>
+                    <div class="surface">
+                        <a href="" class="logo surface-link">
+                            <span>Surface</span>
+                        </a>
+                    </div>
+                    <nav>
+                        <ul class="menu-list">
+                            <li><a href="" class="menu-link arrow computers"><span>Computers</span></a></li>
+                            <li><a href="" class="menu-link arrow comp_for_business"><span>Computers for Business</span></a></li>
+                            <li><a href="" class="menu-link arrow accessories"><span>Accessories</span></a></li>
+                            <li><a href="" class="menu-link arrow more"><span>More</span></a></li>
+                            <li><a href="" class="menu-link arrow dis_none"><span>Shop now</span></a></li>
+                            <li><a href="" class="menu-link dis_none"><span>Support</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-column">
+                    <nav>
+                        <ul class="menu-list">
+                            <li class="mr-15"><a href="" class="menu-link arrow ml-0 all_micr"><span>All Microsoft</span></a></li>
+                            <li class="mr-15"><a href="" class="menu-link icon-search ml-0 hide search"><span>Search</span></a></li>
+                            <li class="mr-15"><a href="" class="menu-link icon-cart ml-0 hide"><span>Cart</span><i class="fa">&#xf07a;</i></a></li>
+                            <li class="mr-15"><a href="" class="icon-call hide"><span>Sign in</span></a></li>                         
+                        </ul>
+                    </nav>
+                </div>
+            </div>  
+            <div class="block-bottom">
+                <button type="button" class="logo-button">Surface</button>
+            </div>          
+    </header>
+    <main></main>
+</body>
+</html>
