@@ -144,7 +144,7 @@
         }
         body {
             font-family: 'Segoe UI',SegoeUI,"Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 14px;
+            font-size: 13px;
         }
         .container {
             display: flex;
@@ -164,7 +164,7 @@
             align-items: center;
         }
         .logo {
-            padding: 17px 6px 15px 10px;
+            padding: 16px 6px 16px 10px;
             margin-top: 1px;
             width: 137px;
             height: 100%;
@@ -230,22 +230,31 @@
             white-space: nowrap;
             padding-left: 2px;
             padding-right: 1px;
-            padding-top: 4px;
+            padding-top: 1px;
         }
         .menu-list {
             display: block;
             position: relative;
         }
+        .menu-list li a {
+            padding-top: 18px;
+        }
         .menu-link {
             color: #262626;
             display: block;
             margin-top: 1px;
-            padding: 16px 8px 10px;
+            padding: 16px 22px 16px 12px;
             height: 48px;
             text-decoration: none;
             width: 100%;
             position: relative;
-            margin-left: 14px;
+            margin-right: -1px;
+        }
+        .more {
+            display: none;
+        }
+        .menu-list li:last-child a {
+            padding: 16px 8px 10px;
         }
         .menu-link span {}
             
@@ -266,6 +275,19 @@
         .menu-list li {
             display: inline-block;
         }
+        .menu-list .mr-15 a {
+            padding-top: 13px;
+        }
+        .menu-list .mr-15:last-child a {
+            padding-left: 0;
+        }
+        .menu-list .mr-15:last-child a span {
+            margin-right: 17px;
+        }
+        
+        .menu-list .mr-15:nth-child(3) a {
+            padding: 16px 18px 16px 12px;
+        }
         
         .arrow span::after {
             font-family: "MWF-MDL2";
@@ -276,14 +298,17 @@
             color: currentColor;
             font-weight: 700;
             padding-top: 7px;
-            bottom: 16px;
+            bottom: 14px;
             margin-left: 6px;
+        }
+        .menu-list .mr-15:first-child span::after {
+            bottom: 19px;
         }
         .ml-0 {
             margin-left: 0;
         }
         .mr-15 {
-            margin-right: 15px;
+            margin-right: 8px;
         }
         .mr-15:last-child {
             margin-right: 26px;
@@ -298,12 +323,15 @@
             color: currentColor;
             font-weight: 700;
             padding-top: 7px;
-            bottom: 16px;
+            bottom: 19px;
             margin-left: 6px;
         }
         .fa {
             font-size:18px;
             margin-left: 5px;
+        }
+        .icon-call {
+            color: #000;
         }
         .icon-call span::after {
             font-family: "MWF-MDL2";
@@ -314,7 +342,7 @@
             color: black;
             font-weight: 700;
             padding-top: 7px;
-            bottom: 13px;
+            bottom: 15px;
             margin-left: 6px; 
         }
         .block-bottom {
